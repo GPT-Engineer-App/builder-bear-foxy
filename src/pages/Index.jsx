@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Navigation from '../components/Navigation';
+import confetti from 'canvas-confetti';
 
 const Index = () => {
   const [inputValue, setInputValue] = useState('');
@@ -28,6 +29,12 @@ const Index = () => {
           />
           <Button onClick={() => alert(`You entered: ${inputValue}`)}>
             Submit
+          </Button>
+          <Button 
+            onClick={() => confetti()}
+            className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold"
+          >
+            Show Confetti!
           </Button>
         </div>
       </main>
